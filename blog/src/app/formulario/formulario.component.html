@@ -1,0 +1,44 @@
+<div class="page-wrapper bg-light p-t-100 p-b-50">
+  <div class="wrapper wrapper--w900">
+      <div class="card card-6">
+          <div class="card-heading">
+              <h2 class="title">Get Into the Color</h2>
+          </div>
+          <div class="card-body">
+              <form (submit)="onSubmit()" #formAutor ="ngForm">
+                  <div class="form-row">
+                      <div class="name">Titulo</div>
+                      <div class="value">
+                          <input class="input--style-6" type="text" name="titulo" [(ngModel)]= "artigo.titulo" required maxlength="50" #autor ="ngModel">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="name">Autor</div>
+                      <div class="value">
+                          <div class="input-group">
+                              <input class="input--style-6" type="text" name="autor" [(ngModel)]="artigo.autor" required maxlength="32" >
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="name">Data</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <input class="input--style-6" type="date" name="data" [(ngModel)]= "artigo.data"  >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="name">Post</div>
+                  <div class="value">
+                      <div class="input-group">
+                          <textarea class="input--style-6" rows="5" type="tex" name="post" [(ngModel)]= "artigo.post" required maxlength="3000"  ></textarea>
+                          <button class="btn btn--radius-2 btn--blue-2" type="submit" [disabled] = "formAutor.invalid">Put into the colors</button>
+                      </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+</div>
