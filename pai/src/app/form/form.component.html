@@ -1,0 +1,22 @@
+<div class="container">
+  <app-header></app-header>
+  <form (submit)="onSubmit()">
+    <div  class="form-group">
+      <label for="autor">Autor</label>
+      <input name ="autor" type="text" [(ngModel)]="post.autor" class="form-control" id="autor">
+    </div>
+    <div class="form-group">
+      <label for="Titulo">Titulo</label>
+      <input name="titulo" [(ngModel)]="post.titulo"type="text" class="form-control" id="titulo">
+    </div>
+    <div class="form-group">
+      <label for="Data">Data de Publicação</label>
+      <input name="data" [(ngModel)]="post.data" type="text" class="form-control" id="data">
+    </div>
+    <div class="form-group">
+      <label for="Conteudo">Conteudo</label>
+      <textarea name="conteudo" [(ngModel)]="post.conteudo" type="text" rows ="3" class="form-control" id="conteudo"></textarea>
+    </div>
+    <button  type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
